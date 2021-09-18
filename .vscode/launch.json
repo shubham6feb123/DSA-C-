@@ -5,6 +5,8 @@ bdbf7f67a2df05eeb5223f1c239cd36ec8622912
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        
+
         {
             "name": "g++.exe - Build and debug active file",
             "type": "cppdbg",
