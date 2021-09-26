@@ -1,4 +1,5 @@
 #include<iostream>
+
 using namespace std;
 # define MAX 2     //size of array
 class Stack{
