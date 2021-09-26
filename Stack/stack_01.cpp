@@ -41,7 +41,7 @@ bool push(int x){
           int x = array[top];
           return x;
         
-         return x;
+        //  return x;
     }
 
     bool isEmpty(){
