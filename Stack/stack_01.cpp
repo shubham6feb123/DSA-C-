@@ -34,7 +34,7 @@ bool push(int x){
       
     }
 
-    int peek(){
+    int peak(){
         if(top<0){
             cout<<"stack is empty"<<endl;
         }
@@ -66,7 +66,7 @@ int main()
    s.push(2);
    s.push(3);
    
-   cout<<"peek "<<s.peek()<<endl;
+   cout<<"peek "<<s.peak()<<endl;
 
    cout<<"isEmpty "<<s.isEmpty()<<endl;
 
