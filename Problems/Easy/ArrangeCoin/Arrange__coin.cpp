@@ -1,37 +1,21 @@
 #include <iostream>
+#include<math.h>
 using namespace std;
 int main()
 {
     int n = 5;
-    int rows = 0;
-    // int chalo = 1;
-    for (int i = 1; n != 0; i++)
-    {
-        for (int j = 0; j < i; j++)
-        {
-            if (n == 0)
-            {
-              cout<<"n zero h"<<endl;
-                break;
-            }
-            else
-            {
-                
-                rows++;
-                n--;
-                cout<<rows<<endl;
-            }
-        }
-    }
+    int k;
 
-    if (n == 0)
-    {
-        cout << rows << endl;
-    }
-    else
-    {
-        cout << "0" << endl;
-    }
+    k = sqrt(2*n + 1/4)-1/2;
+    cout<<"k "<<k<<endl;
+
+      if(k*(k+1)/2 ==n || k*(k+1)/2<n){
+       cout<<"rows "<<k;
+   }else{
+       cout<<"rows "<<k-1;
+   }
+ 
+    
 
     return 0;
 }
