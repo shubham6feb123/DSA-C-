@@ -39,8 +39,8 @@ public:
             return false;
         }else if(rear==front){
             cout << "Item " << array[front] << " removed from Queue" << endl;
-            rear--;
-            front--;
+            rear = -1;
+            front = -1;
             return true;
         }
         else
