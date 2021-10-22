@@ -6,7 +6,7 @@ void print(int arr[],int size){
     }
 }
 int main(){
-    int arr[] = {1};
+    int arr[] = {0,1,0};
     int size = sizeof(arr)/sizeof(arr[0]);
     int i = 0;
     int j = 0;

@@ -54,7 +54,7 @@ public:
         }
         else
         {
-            return arr[0];
+            return arr[front];
         }
     }
 
@@ -73,6 +73,17 @@ public:
     int size()
     {
         return rear + 1;
+    }
+
+    void displayQueue(){
+        if(rear<0){
+            cout<<"Queue is empty"<<endl;
+        }else{
+             cout<<"Queue is ";
+            for(int i=front;i<=rear;i++){
+                cout<<arr[i]<<" ";
+            }
+        }
     }
 };
 int main()
@@ -100,6 +111,10 @@ int main()
     cout << "size " << q1.size() << endl;
     cout << "front element " << q1.frontElement() << endl;
     cout << "rear element " << q1.rearElement() << endl;
+
+    q1.displayQueue();
+
+
 
     return 0;
 }
