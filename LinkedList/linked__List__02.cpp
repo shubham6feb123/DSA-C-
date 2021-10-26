@@ -150,6 +150,21 @@ node *getMiddleOfLinkedList(node* &head)
  
 }
 
+//checking how many duplicate data is present in a linked list
+int duplicateData(node* &head,int val){
+node* ptr = head;
+int count = 0;
+while(ptr!=NULL){
+if(ptr->data==val){
+    count++;
+    // ptr = ptr->next;
+}
+ptr = ptr->next;
+}
+
+return count;
+}
+
 void display(node *&head)
 {
     node *ptr = head;
@@ -181,9 +196,12 @@ int main()
     node *getNode = getNthNode(head, 3);
     cout << "Nth Node Data : " << getNode->data << "\nData of next to Nth node : " << getNode->next->data << endl;
     insertAtTail(head,5);
-      display(head);
+     
     node* middleElemOfLL = getMiddleOfLinkedList(head);
     cout << "Middle of linked list : " << middleElemOfLL->data << endl;
+    insertAtTail(head,5);
+     display(head);
+    cout<<"duplicate data "<<duplicateData(head,5)<<endl;
 
     return 0;
 }
