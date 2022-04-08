@@ -1,4 +1,5 @@
 #include <iostream>
+#include<math.h>
 using namespace std;
 class node
 {
@@ -162,7 +163,7 @@ if(ptr->data==val){
 ptr = ptr->next;
 }
 
-return count;
+return count-1;
 }
 
 void display(node *&head)
@@ -196,12 +197,13 @@ int main()
     node *getNode = getNthNode(head, 3);
     cout << "Nth Node Data : " << getNode->data << "\nData of next to Nth node : " << getNode->next->data << endl;
     insertAtTail(head,5);
-     
+    insertAtTail(head,6); 
     node* middleElemOfLL = getMiddleOfLinkedList(head);
     cout << "Middle of linked list : " << middleElemOfLL->data << endl;
-    insertAtTail(head,5);
+    // insertAtTail(head,5);
      display(head);
-    cout<<"duplicate data "<<duplicateData(head,5)<<endl;
+    // cout<<"duplicate data "<<duplicateData(head,5)<<endl;
 
     return 0;
 }
+

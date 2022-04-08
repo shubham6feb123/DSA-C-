@@ -69,13 +69,6 @@ for(int col=0;col<N;col++){
     if(isSafe(board,row,col)){
         board[row][col] = 1;
         if(NQueen(board,row+1,0)){
-    //         cout<<"\n";
-    //    for(int i=0;i<N;i++){
-    //     for(int j=0;j<N;j++){
-    //         cout<<board[i][j]<<" ";
-    //     }
-    //     cout<<endl;
-    // }
             return true;
         }
         else{

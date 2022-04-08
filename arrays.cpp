@@ -1,5 +1,7 @@
 #include<iostream>
+#include<math.h>
 using namespace std;
+
 // int fun(int * arr){
 // cout<<*(arr+3);
 // return 0;
@@ -25,9 +27,12 @@ int main()
     // int *b = arr;
     // fun(b);
 
-    fun2(arr);
-     for(int i=0;i<5;i++){
-       cout<<arr[i]<<" ";
-   }
+   //  fun2(arr);
+   //   for(int i=0;i<5;i++){
+   //     cout<<arr[i]<<" ";
+   // }
+
+   cout<<(10%10);
+
     return 0;
 }
