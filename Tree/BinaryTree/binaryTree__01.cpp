@@ -3,6 +3,7 @@
 #include <limits>
 #include <queue>
 #include <vector>
+#include<map>
 using namespace std;
 class Node
 {
@@ -200,6 +201,48 @@ cout << list[i]->data << ' ';
 
 }
 
+//top view of binary tree
+
+class Pair{
+    public:
+    int hd;
+    Node* node;
+
+    Pair(int hd,Node* root){
+        this->hd = hd;
+        this->node = root;
+    }
+};
+
+void topViewBinaryTree(Node* root){
+queue<Pair>q; //pair me hme chahiye hd or node
+map<int,int>map;
+q.push(Pair(0,root));
+
+while(!q.empty()){
+  Pair cur = q.front();
+  
+  q.pop();
+
+  if(!map.count(cur.hd)){
+      map[cur.hd] = cur.node->data;
+  }
+
+  if(cur.node->left) q.push(Pair(cur.hd-1,cur.node->left));
+
+  if(cur.node->right) q.push(Pair(cur.hd+1,cur.node->right));
+
+}
+
+cout<<"-------Printing map--------"<<endl;
+ for (auto i : map)
+        cout << i.first << "   " << i.second
+             << endl;
+
+};
+
+//top view of binary tree
+
 int main()
 {
     Node *root = createTree();
@@ -227,7 +270,9 @@ int main()
 
     // printLeftView(root);
 
-    leftViewPrint(root);
+    // leftViewPrint(root);
+
+    topViewBinaryTree(root);
 
     return 0;
 }
